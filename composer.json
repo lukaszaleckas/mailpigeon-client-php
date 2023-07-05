@@ -1,0 +1,29 @@
+{
+    "name": "lukaszaleckas/mailpigeon-client-php",
+    "type": "library",
+    "autoload": {
+        "psr-4": {
+            "MailPigeon\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "MailPigeon\\Tests\\": "tests/"
+        }
+    },
+    "authors": [
+        {
+            "name": "lukaszaleckas",
+            "email": "lukas.zaleckas@hostinger.com"
+        }
+    ],
+    "require": {
+        "php": "^5.6|^7.0|^8.0",
+        "guzzlehttp/guzzle": "^6.0|^7.0",
+        "ext-json": "*"
+    },
+    "require-dev": {
+        "vlucas/phpdotenv": "^4.3",
+        "phpunit/phpunit": "^5.0"
+    }
+}
