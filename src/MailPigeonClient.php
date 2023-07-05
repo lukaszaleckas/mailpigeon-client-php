@@ -12,6 +12,11 @@ use Psr\Http\Message\ResponseInterface;
 class MailPigeonClient
 {
     /**
+     * @var string
+     */
+    const HOST = 'https://mailpigeon.io';
+
+    /**
      * @var Client
      */
     private $client;
@@ -20,10 +25,10 @@ class MailPigeonClient
      * @param string $host
      * @param string $apiKey
      */
-    public function __construct($host, $apiKey)
+    public function __construct($apiKey)
     {
         $this->client = new Client([
-            'base_uri'    => $host,
+            'base_uri'    => self::HOST,
             'headers'     => [
                 'Authorization' => 'Bearer '.$apiKey,
             ],

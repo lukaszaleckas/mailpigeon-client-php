@@ -25,10 +25,7 @@ abstract class IntegrationTestCase extends PHPUnit_Framework_TestCase
         $this->loadEnv();
 
         $this->api = new MailPigeonApi(
-            new MailPigeonClient(
-                $_ENV['API_HOST'],
-                $_ENV['API_KEY']
-            )
+            new MailPigeonClient($_ENV['API_KEY'])
         );
     }
 
